@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Palestine</title>
+    <style>
+        body {
+            background-image: url('icegif-1392.gif');
+            /* Set GIF as background */
+            background-size: cover;
+            /* Cover the entire background */
+            background-position: center;
+            /* Center the background image */
+            color: #ffffff;
+            /* White text */
+            font-family: 'Courier New', Courier, monospace;
+            /* Monospace font */
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 127, 32, 0.8);
+            /* Semi-transparent orange */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        header:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #ff7f20;
+            /* Flipper Orange */
+            text-align: center;
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #hope-line {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #ff7f20;
+            /* Flipper Orange */
+            font-weight: bold;
+            animation: fadeIn 1s forwards;
+        }
+
+        #images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .responsive {
+            max-width: calc(33% - 20px);
+            /* Adjust width for 3 images per row */
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border: 2px solid #ff7f20;
+            /* Orange border for images */
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+            position: relative;
+            overflow: hidden;
+            /* Clipping overflow for hover effect */
+        }
+
+        .responsive::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .responsive:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+            filter: brightness(1.1);
+        }
+
+        .responsive:hover::after {
+            opacity: 1;
+            /* Show overlay on hover */
+        }
+
+        #donate {
+            text-align: center;
+            background-color: rgba(255, 127, 32, 0.8);
+            /* Semi-transparent orange */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #donate:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .donate-button {
+            background-color: #0a0a0a;
+            /* Black button */
+            color: #ff7f20;
+            /* Orange text */
+            padding: 12px 24px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            border: 2px solid #ff7f20;
+            /* Orange border */
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .donate-button:hover {
+            background-color: #ff7f20;
+            /* Orange on hover */
+            color: #0a0a0a;
+            /* Black text on hover */
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #ff7f20;
+            /* Flipper Orange */
+            transition: color 0.3s;
+        }
+
+        footer:hover {
+            color: #ffffff;
+            /* Change text color on hover */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .responsive {
+                max-width: calc(50% - 20px);
+                /* Adjust for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .responsive {
+                max-width: calc(100% - 20px);
+                /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Free Palestine</h1>
+        <p>Support the cause and help make a difference.</p>
+    </header>
+
+    <section id="hope-line">
+        <h2>Hope for a Brighter Future</h2>
+    </section>
+
+    <section id="images">
+        <img src="https://static.vecteezy.com/system/resources/previews/018/758/346/original/illustration-of-save-palestine-palestine-map-with-wire-perfect-for-print-banner-poster-campaign-etc-free-vector.jpg"
+            alt="Palestine map illustration" class="responsive">
+        <img src="http://3.bp.blogspot.com/-1VHwYNoJErs/T-T24ujQhrI/AAAAAAAAAGU/1wBHLWTSCsQ/s1600/Free_Palestine__poster_II_by_AutaAutistik.jpg"
+            alt="Free Palestine poster" class="responsive">
+        <img src="https://img-cdn.thepublive.com/fit-in/1200x675/bnn/media/post_attachments/content/uploads/2023/10/israel-palestine-conflict-20231013153019.jpg"
+            alt="Israel-Palestine conflict image" class="responsive">
+    </section>
+
+    <section id="donate">
+        <h2>How You Can Help</h2>
+        <p>Your contributions can make a significant impact.</p>
+        <a href="https://islamic-relief.org/appeals/palestine-emergency-appeal/?gad_source=1&gclid=EAIaIQobChMIl93slrq6iQMVcatmAh1L_jasEAAYAiAAEgKukvD_BwE"
+            class="donate-button" target="_blank">Donate Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Free Palestine Support. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
